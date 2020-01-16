@@ -1,0 +1,34 @@
+{
+  "name": "fitness-api",
+  "version": "1.0.0",
+  "description": "A fitness tracking REST API",
+  "main": "server.js",
+  "scripts": {
+    "build": "babel server.js -d dist",
+    "start:dev": "npm run build && nodemon dist/server.js",
+    "start": "npm run build && node dist/server.js",
+    "test": "jest",
+    "print": "tree -L 2 -I \"node_modules\" >> dist/directree.txt"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "author": "owaisj",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
+    "jest": "^24.9.0",
+    "nodemon": "^2.0.2",
+    "tree-node-cli": "^1.2.5"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.5.8"
+  }
+}
